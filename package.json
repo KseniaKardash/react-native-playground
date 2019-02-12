@@ -1,0 +1,28 @@
+{
+  "name": "project2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ios": "react-native run-ios",
+    "android": "react-native run-android"
+  },
+  "dependencies": {
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "react-native-calendars": "^1.21.0",
+    "react-native-circular-action-menu": "^0.5.0",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-splash-screen": "^3.1.1",
+    "react-native-vector-icons": "^6.1.0",
+    "react-navigation": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
