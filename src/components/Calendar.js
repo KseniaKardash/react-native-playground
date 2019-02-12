@@ -1,34 +1,37 @@
 import React, { Component } from 'react';
-import { Calendar } from 'react-native-calendars';
-import { ELECTRIC, PEACHY } from '../assets/colors';
+import { CalendarList } from 'react-native-calendars';
+import { View } from 'react-native';
+import { ELECTRIC, PEACHY, WHITE, DARK_GRAY } from '../assets/colors';
 
 class CustomCalendar extends Component {
 
   render() {
     return (
-      <Calendar
-        current={'2012-03-01'}
-        minDate={'2012-05-10'}
-        maxDate={'2012-05-30'}
-        markedDates={{
-        '2012-03-16': {selected: true, marked: true, selectedColor: {ELECTRIC}},
-        '2012-03-17': {marked: true},
-        '2012-03-18': {marked: true, dotColor: {PEACHY}, activeOpacity: 0},
-        '2012-03-19': {disabled: true, disableTouchEvent: true}
-      }}
-      markingType={'multi-dot'}
-        onDayPress={(day) => {console.log('selected day', day)}}
-        onDayLongPress={(day) => {console.log('selected day', day)}}
-        monthFormat={'yyyy MM'}
-        onMonthChange={(month) => {console.log('month changed', month)}}
-        hideArrows={true}
-        renderArrow={(direction) => (<Arrow />)}
-        hideExtraDays={true}
-        disableMonthChange={true}
-        firstDay={1}
-        hideDayNames={true}
-        showWeekNumbers={true}
-      />
+      <CalendarList
+  theme={{
+    textMonthFontSize: 20,
+    textSectionTitleColor: DARK_GRAY,
+    monthTextColor: DARK_GRAY,
+    selectedDayTextColor: WHITE,
+    selectedDayBackgroundColor: ELECTRIC,
+    todayTextColor: ELECTRIC,
+    selectedDotColor: ELECTRIC,
+  }}
+  onVisibleMonthsChange={(months) => {console.log('now these months are visible', months);}}
+  pastScrollRange={30}
+  futureScrollRange={30}
+  scrollEnabled={true}
+  showScrollIndicator={true}
+  markedDates={{
+    '2019-02-16': { selected: true, selectedColor: PEACHY },
+    '2019-02-19': { selected: true, selectedColor: PEACHY },
+    '2019-02-27': { selected: true, selectedColor: PEACHY },
+    '2019-02-1': { selected: true, selectedColor: PEACHY },
+    '2019-03-4': { selected: true, selectedColor: PEACHY },
+    '2019-03-14': { selected: true, selectedColor: PEACHY },
+    '2019-02-23': { selected: true, selectedColor: PEACHY },
+  }}
+/>
     );
   }
 }

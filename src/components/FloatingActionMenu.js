@@ -15,14 +15,14 @@ class FloatingActionMenu extends Component {
       itemSize={50}
       size={70}
       style={styles.actionButton}>
-        <ActionButton.Item buttonColor={PEACHY} title="New Task" onPress={() => this.props.navigation.navigate('Calendar')}>
-          <Icon name="twitter" style={styles.actionButtonIcon} />
+        <ActionButton.Item buttonColor={PEACHY} title="Calendar" onPress={() => this.props.navigation.navigate('Calendar')}>
+          <Icon name="camera" size={23} color={WHITE} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor={PEACHY} title="Notifications" onPress={() => this.props.navigation.navigate('Home')}>
-          <Icon name="vine" style={styles.actionButtonIcon} />
+        <ActionButton.Item buttonColor={PEACHY} title="Home" onPress={() => this.props.navigation.navigate('Home')}>
+          <Icon name="home" size={26} color={WHITE} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor={PEACHY} title="All Tasks" onPress={() => this.props.navigation.navigate('Calendar')}>
-          <Icon name="calendar" style={styles.actionButtonIcon} />
+        <ActionButton.Item buttonColor={PEACHY} title="Calendar" onPress={() => this.props.navigation.navigate('Calendar')}>
+          <Icon name="calendar" size={23} color={WHITE}/>
         </ActionButton.Item>
       </ActionButton>
     );

@@ -3,6 +3,8 @@ package com.project2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnative.photoview.PhotoViewPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import org.opencv.RNOpenCVPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -27,6 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new PhotoViewPackage(),
+            new LinearGradientPackage(),
             new RNGestureHandlerPackage(),
             new RNOpenCVPackage(),
             new SplashScreenReactPackage(),

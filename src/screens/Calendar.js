@@ -6,15 +6,11 @@ import FloatingActionMenu from '../components/FloatingActionMenu';
 
 class Calendar extends Component {
 
-  static navigationOptions = {
-    title: 'Calendar',
-  };
-
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={{flex: 1, marginHorizontal: 20, backgroundColor: {WHITE}, alignContent: 'flex-end'}}>
-        <Calendar />
+        <View style={{flex: 1, backgroundColor: {WHITE}, alignContent: 'flex-end'}}>
+        <CustomCalendar />
         <FloatingActionMenu navigation={this.props.navigation} />
         </View>
       </SafeAreaView>
