@@ -3,10 +3,10 @@ package com.project2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.reactnative.camera.RNCameraPackage;
 import com.reactnative.photoview.PhotoViewPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import org.opencv.RNOpenCVPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -32,9 +32,9 @@ public class MainApplication extends Application implements ReactApplication {
             new PhotoViewPackage(),
             new LinearGradientPackage(),
             new RNGestureHandlerPackage(),
-            new RNOpenCVPackage(),
             new SplashScreenReactPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new RNCameraPackage()
       );
     }
 

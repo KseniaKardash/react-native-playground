@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View, StyleSheet, Text, SafeAreaView } from "react-native";
+import React, { Component } from 'react';
+import { View, StyleSheet, Text, SafeAreaView } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import FloatingActionMenu from '../components/FloatingActionMenu';
 import { WHITE, DARK_GRAY } from '../assets/colors.js';
@@ -12,7 +12,7 @@ class Home extends Component {
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView testID='home_screen' style={styles.container}>
         <View style={styles.viewContainer}>
           <Text style={styles.text}>Home Screen</Text>
           <FloatingActionMenu navigation={this.props.navigation}/>
@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
   },
   viewContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 26,
